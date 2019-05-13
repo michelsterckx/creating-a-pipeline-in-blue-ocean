@@ -6,9 +6,14 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         echo 'Hoi!'
+      }
+    }
+    stage('somein') {
+      steps {
+        sh 'ping www.gva.be'
       }
     }
   }
