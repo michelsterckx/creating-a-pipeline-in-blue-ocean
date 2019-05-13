@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
+        sh 'ping pvx0devo1.ux.pv.be'
       }
     }
     stage('error') {
