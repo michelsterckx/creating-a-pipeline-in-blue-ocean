@@ -12,9 +12,9 @@ pipeline {
         sh 'npm install'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        ansibleTower(towerServer: 'pvxodevo1.ux.pv.be', jobTemplate: 'Alfresco - Index')
+        ansibleTower(towerServer: 'pvxodevo1.ux.pv.be', jobTemplate: 'Alfresco 5 - deploy')
       }
     }
   }
