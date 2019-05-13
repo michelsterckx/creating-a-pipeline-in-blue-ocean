@@ -13,7 +13,7 @@ pipeline {
     }
     stage('somein') {
       steps {
-        sh 'ping www.gva.be'
+        sh 'node --version'
       }
     }
   }
