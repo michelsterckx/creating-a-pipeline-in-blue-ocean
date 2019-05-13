@@ -6,16 +6,14 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('deploy on server 1') {
       steps {
-        echo 'Hoi!'
+        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', verbose: true)
       }
     }
-    stage('somein') {
+    stage('deploy on server 2') {
       steps {
-        sh 'node --version'
-        pwd()
-        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', verbose: true)
+        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', inventory: 'demo2', verbose: true)
       }
     }
   }
