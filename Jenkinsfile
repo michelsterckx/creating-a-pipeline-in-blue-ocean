@@ -14,6 +14,7 @@ pipeline {
     stage('somein') {
       steps {
         sh 'node --version'
+        pwd()
       }
     }
   }
