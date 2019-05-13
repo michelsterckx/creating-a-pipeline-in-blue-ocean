@@ -15,6 +15,7 @@ pipeline {
       steps {
         sh 'node --version'
         pwd()
+        ansibleTower(towerServer: 'pvx0devo1.ux.pv.be', jobTemplate: 'Alfresco 5 - deploy', credential: 'admin', verbose: true)
       }
     }
   }
