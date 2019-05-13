@@ -14,7 +14,7 @@ pipeline {
     }
     stage('error') {
       steps {
-        ansibleTower(towerServer: 'pvxodevo1.ux.pv.be', jobTemplate: 'Alfresco 5 - deploy')
+        ansibleTower(towerServer: 'pvxodevo1.ux.pv.be', jobTemplate: 'Alfresco 5 - deploy', credential: 'admin')
       }
     }
   }
