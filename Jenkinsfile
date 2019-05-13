@@ -15,7 +15,7 @@ pipeline {
       steps {
         sh 'node --version'
         pwd()
-        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', credential: 'admin', verbose: true, jobType: 'job')
+        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', verbose: true, jobType: 'job')
       }
     }
   }
