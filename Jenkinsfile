@@ -16,6 +16,7 @@ pipeline {
                  
                 ansibleTower(towerServer: 'Ansible Tower', 
               jobTemplate: 'Service Control - install', 
+                importTowerLogs: true,
                 inventory: 'devo2',
                 extraVars: '''---
 service_state: "stopped"
@@ -32,6 +33,7 @@ service_name:  "alfresco"''',
               
               ansibleTower(towerServer: 'Ansible Tower', 
               jobTemplate: 'Service Control - install', 
+                importTowerLogs: true,
                 inventory: 'devo3',
                 extraVars: '''---
 service_state: "stopped"
@@ -67,6 +69,7 @@ service_name:  "alfresco"''',
                  
                 ansibleTower(towerServer: 'Ansible Tower', 
               jobTemplate: 'Service Control - install', 
+                importTowerLogs: true,
                 inventory: 'devo2',
                 extraVars: '''---
 service_state: "restarted"
@@ -83,6 +86,7 @@ service_name:  "alfresco"''',
               
               ansibleTower(towerServer: 'Ansible Tower', 
               jobTemplate: 'Service Control - install', 
+                importTowerLogs: true,
                 inventory: 'devo3',
                 extraVars: '''---
 service_state: "restarted"
