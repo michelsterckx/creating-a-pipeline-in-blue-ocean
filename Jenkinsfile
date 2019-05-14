@@ -22,7 +22,7 @@ service_state: "stopped"
 service_name:  "alfresco"''', 
                 verbose: true)
                      
-                }
+                
               }
            }
           
@@ -38,7 +38,7 @@ service_state: "stopped"
 service_name:  "alfresco"''', 
                 verbose: true)
                      
-                }
+                
               }
            }
           
