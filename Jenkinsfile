@@ -9,12 +9,15 @@ pipeline {
     
     stage('stop alfresco servers') {
       steps {
-        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Service Control - install', inventory: 'demo2',
-                     extraVars   : [
-                        service_name: "alfresco",
-                        service_state: "stopped",
-                      ], 
-                     verbose: true)
+                             
+        ansibleTower(towerServer: 'Ansible Tower', 
+              jobTemplate: 'Service Control - install', 
+                inventory: 'demo2',
+                extraVars: '''---
+								service_name: "alfresco"
+								service_state: "stopped"''', 
+                verbose: true)
+                     
       }
     }
     
