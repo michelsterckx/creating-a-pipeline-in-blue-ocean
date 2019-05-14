@@ -49,12 +49,12 @@ service_name:  "alfresco"''',
     
     stage('deploy on server 1') {
       steps {
-        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', verbose: true)
+        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', inventory: 'devo2',  verbose: true)
       }
     }
     stage('deploy on server 2') {
       steps {
-        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', inventory: 'demo2', verbose: true)
+        ansibleTower(towerServer: 'Ansible Tower', jobTemplate: 'Alfresco 5 - deploy', inventory: 'devo3', verbose: true)
       }
     }
     
