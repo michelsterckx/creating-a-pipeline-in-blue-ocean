@@ -14,8 +14,6 @@ pipeline {
               jobTemplate: 'Service Control - install', 
                 inventory: 'devo2',
                 extraVars: '''---
-service_state: "stopped",
-inventory_hostname_short: "pvx0devo2.ux.pv.be",
 service_name:  "alfresco"''', 
                 verbose: true)
                      
