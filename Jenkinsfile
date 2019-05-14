@@ -14,8 +14,8 @@ pipeline {
               jobTemplate: 'Service Control - install', 
                 inventory: 'devo2',
                 extraVars: '''---
-								service_name: "alfresco",
-								service_state: "stopped"''', 
+service_name: "alfresco",
+service_state: "stopped"''', 
                 verbose: true)
                      
       }
