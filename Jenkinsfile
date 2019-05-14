@@ -12,7 +12,7 @@ pipeline {
                              
         ansibleTower(towerServer: 'Ansible Tower', 
               jobTemplate: 'Service Control - install', 
-                inventory: 'demo2',
+                inventory: 'devo2',
                 extraVars: '''---
 								service_name: "alfresco"
 								service_state: "stopped"''', 
